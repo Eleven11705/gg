@@ -3,6 +3,38 @@
    Fix #1: SVG thumbnails via base64 (zero CORS, always works)
    Fix #2: Direct iframe loading, smarter blocked-detection
 ═══════════════════════════════════════════════════════════ */
+const display = document.getElementById('display');
+const secretContent = document.getElementById('secret-content');
+const SECRET_CODE = "7787"; // Set your password here
+
+function appendToDisplay(input) {
+    display.value += input;
+}
+
+function clearDisplay() {
+    display.value = "";
+}
+
+function calculate() {
+    // 1. Check if the display exactly matches your secret code
+    if (display.value === SECRET_CODE) {
+        revealVault();
+    } else {
+        // 2. Otherwise, perform a normal calculation if possible
+        try {
+            display.value = eval(display.value);
+        } catch (error) {
+            display.value = "Error";
+        }
+    }
+}
+
+function revealVault() {
+    alert("Access Granted!");
+    secretContent.style.display = "block";
+    document.querySelector('.calculator').style.display = "none";
+}
+
 // A basic non-secure password check
 function checkPassword() {
   const password = prompt("Please enter the password to view this site:");
