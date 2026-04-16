@@ -643,3 +643,8 @@ a:hover { color: var(--accent-2); }
   #gameGrid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   #mainContent { padding: 12px; }
 }
+
+.calculator { width: 200px; padding: 20px; border: 1px solid #ccc; }
+#display { width: 100%; height: 40px; text-align: right; margin-bottom: 10px; }
+.keys { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+
