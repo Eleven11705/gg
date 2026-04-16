@@ -12,7 +12,7 @@ function checkPassword() {
     alert("Access granted!");
   } else {
     alert("Access denied!");
-    window.location.href = "about:blank"; // redirect away
+    window.location.href = "https://eleven11705.github.io/booo/"; // redirect away
   }
 }
 
