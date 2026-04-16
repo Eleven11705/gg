@@ -3,6 +3,21 @@
    Fix #1: SVG thumbnails via base64 (zero CORS, always works)
    Fix #2: Direct iframe loading, smarter blocked-detection
 ═══════════════════════════════════════════════════════════ */
+// A basic non-secure password check
+function checkPassword() {
+  const password = prompt("Please enter the password to view this site:");
+  const correctPassword = "wearthebanana"; // visible to anyone in source code
+
+  if (password === correctPassword) {
+    alert("Access granted!");
+  } else {
+    alert("Access denied!");
+    window.location.href = "about:blank"; // redirect away
+  }
+}
+
+window.onload = checkPassword;
+
 
 // ─── CATEGORY META ────────────────────────────────────────
 const CAT_ICONS = {
