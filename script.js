@@ -5,7 +5,7 @@
 ═══════════════════════════════════════════════════════════ */
 const display = document.getElementById('display');
 const secretContent = document.getElementById('secret-content');
-const SECRET_CODE = "7787"; // Set your password here
+const SECRET_CODE = "9887"; // Set your password here
 
 function appendToDisplay(input) {
     display.value += input;
@@ -35,20 +35,7 @@ function revealVault() {
     document.querySelector('.calculator').style.display = "none";
 }
 
-// A basic non-secure password check
-function checkPassword() {
-  const password = prompt("Please enter the password to view this site:");
-  const correctPassword = "wearthebanana"; // visible to anyone in source code
 
-  if (password === correctPassword) {
-    alert("Access granted!");
-  } else {
-    alert("Access denied!");
-    window.location.href = "https://eleven11705.github.io/booo/"; // redirect away
-  }
-}
-
-window.onload = checkPassword;
 
 
 // ─── CATEGORY META ────────────────────────────────────────
