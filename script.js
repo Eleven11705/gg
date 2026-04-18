@@ -289,6 +289,7 @@ const games = [
   {id:189, title:'Iron Snout',               cat:'Fighting',    url:'https://ironsnout.io'},
   {id:190, title:'Pokemon Showdown',         cat:'RPG',         url:'https://pokemonshowdown.com'},
   {id:192, title:'Drawphone',                cat:'Multiplayer', url:'https://drawphone.tannerkrewson.com'},
+   {id:192, title:'tiktok',                cat:'Multiplayer', url:'https://tiktok.com'},
 ];
 // ─── CATEGORIES LIST ─────────────────────────────────────
 const CATEGORIES = [
