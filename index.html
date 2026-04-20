@@ -35,6 +35,43 @@
         <button onclick="clearDisplay()">C</button>
     </div>
    <h3> Any misconduct will result in ban</h3>
+  <body onload="getIP()">
+
+
+<div class="card1">
+
+
+  <div class="row"><span>IP Address:</span><span id="ip">--</span></div>
+  <div class="row"><span>Country:</span><span id="country">--</span></div>
+  <div class="row"><span>Region:</span><span id="region">--</span></div>
+  <div class="row"><span>City:</span><span id="city">--</span></div>
+  <div class="row"><span>ISP:</span><span id="isp">--</span></div>
+
+  <button onclick="getIP()">Submit</button>
+</div>
+
+<script>
+function getIP() {
+  fetch("https://ipwho.is/")
+    .then(res => res.json())
+    .then(data => {
+      if (data.success === false) {
+        alert("IP detect nahi ho rahi");
+        return;
+      }
+
+      document.getElementById("ip").innerText = data.ip;
+      document.getElementById("country").innerText = data.country;
+      document.getElementById("region").innerText = data.region;
+      document.getElementById("city").innerText = data.city;
+      document.getElementById("isp").innerText = data.connection.isp;
+
+    })
+    .catch(() => {
+      alert("Network / fetch issue");
+    });
+}
+</script>
 </div>
 <!-- This is what will be revealed -->
 <div id="secret-content" style="display:none;">
