@@ -5,7 +5,7 @@
 ═══════════════════════════════════════════════════════════ */
 const display = document.getElementById('display');
 const secretContent = document.getElementById('secret-content');
-const SECRET_CODE = "8799"; // Set your password here
+const SECRET_CODE = "778899"; // Set your password here
 
 function appendToDisplay(input) {
     display.value += input;
